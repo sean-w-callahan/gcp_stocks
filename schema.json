@@ -1,0 +1,12 @@
+[
+    {"name": "ticker", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "volume", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "vol_weighted_avg_price", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "open", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "close", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "high", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "low", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "unix_timestamp", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "num_transactions", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "datetime", "type": "DATE", "mode": "NULLABLE"}
+]
