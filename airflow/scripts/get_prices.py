@@ -1,5 +1,5 @@
-import requests
 import pandas as pd
+import requests
 from google.cloud import storage
 
 
@@ -7,7 +7,6 @@ def get_prices(**kwargs):
     api_key = kwargs['api_key']
     yesterday = kwargs['yesterday']
     query = f'https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/{yesterday}?adjusted=true&apiKey={api_key}'
-
     req = requests.get(query)
     response_content = req.json()
 
@@ -16,7 +15,7 @@ def get_prices(**kwargs):
         rows = [list(d.values()) for d in data]
         cols = ['ticker', 'volume', 'vol_weighted_avg_price', 'open', 'close', 'high', 'low', 'unix_timestamp', 'num_transactions']
         df = pd.DataFrame(rows, columns=cols)
-        df['datetime'] = yesterday
+        df['date'] = yesterday
         client = storage.Client()
         bucket = client.bucket('stocks-data-output')
         blob = bucket.blob(f'prices_{yesterday}.csv')

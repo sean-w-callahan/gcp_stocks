@@ -8,5 +8,5 @@
     {"name": "low", "type": "FLOAT", "mode": "NULLABLE"},
     {"name": "unix_timestamp", "type": "FLOAT", "mode": "NULLABLE"},
     {"name": "num_transactions", "type": "FLOAT", "mode": "NULLABLE"},
-    {"name": "datetime", "type": "DATE", "mode": "NULLABLE"}
+    {"name": "date", "type": "DATE", "mode": "NULLABLE"}
 ]
